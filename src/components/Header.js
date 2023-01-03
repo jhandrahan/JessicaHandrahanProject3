@@ -1,4 +1,5 @@
-const Header = () => {
+
+const Header = () => { 
     return (
         <header>
             <h1>Recipe Finder</h1>
