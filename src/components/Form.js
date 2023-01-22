@@ -3,22 +3,23 @@ import { useState } from "react";
 const Form = ({handleSubmit}) => {
     const [ userInput, setUserInput ] = useState('');
     
+    
+    
     const handleChange = (event) =>{
        setUserInput(event.target.value) 
-      
     }
 
-
+    
     return (
-        <form action="" onSubmit={(event) => {handleSubmit(event, userInput)}}>
-            <label htmlFor="search">Search</label>
+        <form class="search" action="" onSubmit={(event) => { handleSubmit(event, userInput) }} >
+            <label htmlFor="search"></label>
             <input 
             type="text" 
+            placeholder="Enter type of food here" 
             onChange={handleChange}
             value={userInput}
             />
-            
-            <button type="submit">Submit</button>
+            <button type="submit">Find Recipe</button>
         </form>
     )
 }

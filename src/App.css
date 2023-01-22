@@ -8,6 +8,81 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+@font-face {
+  font-family: "Hind";
+ 
+  src: local("Hind-Regular"),
+    url("./fonts/Hind-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+
+  src: local("Montserrat"),
+    url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+
+html{
+  font-size: 62.5%;
+}
+
+h1{
+  font-size: 5rem;
+  font-family: Montserrat, sans-serif;
+
+}
+
+body,
+p{
+  font-size: 2rem;
+  font-family: Hind, sans-serif;
+}
+
+body{
+  background-color: palevioletred;
+}
+
+header{
+  text-align: center;
+
+}
+
+.recipeImages{
+  background-color: white;
+}
+
+.search {
+      width: 90%;
+      height: 45px;
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.116);
+      border-radius: 20px;
+      border: 2px solid #fff;
+}
+    input {
+      width: 70%;
+      padding: 10px 15px;
+      color: black;
+      border: 0;
+      background: transparent;
+
+  
+    }
+  
+    button {
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      height: 40px;
+      width: 29%;
+      color: #fff;
+      background: transparent;
+      border-left: 1px solid #fff;
+      border-radius: 0 3px 3px 0;
+ 
+    }
+    
+
 .itemContainer{
   list-style: none;
   margin: 0;

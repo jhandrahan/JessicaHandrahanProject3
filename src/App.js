@@ -1,4 +1,6 @@
 import './App.css';
+import './fonts/Hind-Regular.ttf'
+import './fonts/Montserrat-VariableFont_wght.ttf'
 import Header from './components/Header'; 
 import Form from './components/Form';
 import Gallery from './components/Gallery'
@@ -8,7 +10,7 @@ import axios from 'axios';
 function App() {
 
   const [recipes, setRecipes] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState(' ');
 
   useEffect(() => {
     axios({
@@ -16,7 +18,8 @@ function App() {
       params: {
         apiKey: 'cf6c7cb9ef804ec5a5ee4edd6f19b1ee',
         query: inputValue,
-        number: 20
+        number: 6,
+        addRecipeInformation: true
       }
     }).then((apiData) => {
       // console.log(apiData)
