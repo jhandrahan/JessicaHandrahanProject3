@@ -11,7 +11,7 @@ const Form = ({handleSubmit}) => {
 
     
     return (
-        <form class="search" action="" onSubmit={(event) => { handleSubmit(event, userInput) }} >
+        <form className="search" action="" onSubmit={(event) => { handleSubmit(event, userInput) }} >
             <label htmlFor="search"></label>
             <input 
             type="text" 

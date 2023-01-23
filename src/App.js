@@ -18,7 +18,7 @@ function App() {
       params: {
         apiKey: 'cf6c7cb9ef804ec5a5ee4edd6f19b1ee',
         query: inputValue,
-        number: 6,
+        number: 20,
         addRecipeInformation: true
       }
     }).then((apiData) => {
