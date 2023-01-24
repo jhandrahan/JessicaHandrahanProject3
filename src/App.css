@@ -113,9 +113,13 @@ li{
  
 }
 
+.itemContainer:hover .image{
+  opacity: 1;
+}
 
 img {
   max-width: 100%;
+  opacity: 0.85;
 }
 
 form{
@@ -136,8 +140,9 @@ input{
 input:focus{
   color: slateblue;
 }
+
 input::placeholder{
-  color: slategray;
+  color: rgb(99, 156, 212);
 }
 
 .searchBtn{
@@ -148,3 +153,12 @@ input::placeholder{
   cursor: pointer;
 }
 
+p{
+  text-align: center;
+  color: white;
+}
+
+.recipeImages{
+  padding-bottom: 70px;
+  padding-top: 70px;
+}

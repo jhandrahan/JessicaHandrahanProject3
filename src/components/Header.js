@@ -2,7 +2,7 @@
 const Header = () => { 
     return (
         <header>
-            <h1>Recipe Finder</h1>
+            <h1>Recipe-Finder</h1>
         </header>
     )
 }
