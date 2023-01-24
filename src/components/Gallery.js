@@ -1,11 +1,11 @@
 import Item from './Item'
+
 const Gallery = ({recipeArray}) => {
     return(
         <div>
             <ul className="recipeImages">
                 {
                     recipeArray.map((recipeObject) =>{
-                    //   console.log(recipeObject)  
                       return <Item key={recipeObject.id} recipeData={recipeObject}/>
                     })
                 }
@@ -14,5 +14,4 @@ const Gallery = ({recipeArray}) => {
         </div>
     )
 }
-
 export default Gallery;

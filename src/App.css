@@ -26,6 +26,15 @@ html{
   font-size: 62.5%;
 }
 
+body {
+  background-color: slateblue;
+  font-size: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
 h1{
   font-size: 6rem;
   color: white;
@@ -41,11 +50,11 @@ h2{
   text-transform: uppercase;
 }
 
-
-body,
-p{
+p {
   font-size: 2rem;
   font-family: Hind, sans-serif;
+  text-align: center;
+  color: white;
 }
 
 a {
@@ -72,14 +81,6 @@ a:hover{
   margin-bottom: 5px;
 }
 
-body{
-  background-color: slateblue;
-}
-
-header{
-  text-align: center;
-
-}
 ul{
   background-color: white;
   padding: 0;
@@ -108,18 +109,17 @@ li{
   box-shadow:5px 10px 15px slateblue ;
 }
 
-.textContainer{
-  margin: 5px 5px 10px 5px;
- 
+img {
+  max-width: 100%;
+  opacity: 0.85;
 }
 
 .itemContainer:hover .image{
   opacity: 1;
 }
 
-img {
-  max-width: 100%;
-  opacity: 0.85;
+.textContainer {
+  margin: 5px 5px 10px 5px;
 }
 
 form{
@@ -153,12 +153,4 @@ input::placeholder{
   cursor: pointer;
 }
 
-p{
-  text-align: center;
-  color: white;
-}
 
-.recipeImages{
-  padding-bottom: 70px;
-  padding-top: 70px;
-}
