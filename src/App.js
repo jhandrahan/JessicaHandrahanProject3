@@ -5,6 +5,7 @@ import './fonts/Montserrat-VariableFont_wght.ttf'
 import Header from './components/Header'; 
 import Form from './components/Form';
 import Gallery from './components/Gallery'
+import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -39,6 +40,7 @@ function App() {
       <Header/>
       <Form handleSubmit={selectInputValue}/>
       <Gallery recipeArray={recipes}/>
+      <Footer/>
     </>
   );
 }
