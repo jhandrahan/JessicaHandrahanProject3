@@ -5,8 +5,12 @@ const Item = ({recipeData}) => {
     return(
         <li className="itemContainer">
             <img src={recipeData.image} alt={recipeData.title} />
-            <h2>{recipeData.title}</h2>
-            <a href={recipeData.sourceUrl}>View Recipe</a>
+
+            <div className="textContainer">
+                <h2>{recipeData.title}</h2>
+                <a className="link" href={recipeData.sourceUrl} target="_blank">View Recipe</a>
+            </div>
+
         </li>
     )
 }

@@ -27,9 +27,18 @@ html{
 }
 
 h1{
-  font-size: 5rem;
+  font-size: 6rem;
   color: white;
   font-family: Montserrat, sans-serif;
+}
+
+h2{
+  margin: 5px 1px 50px 1px;
+  font-family: Hind, sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: darkslateblue;
+  text-transform: uppercase;
 }
 
 
@@ -37,6 +46,30 @@ body,
 p{
   font-size: 2rem;
   font-family: Hind, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: Hind, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid darkslateblue;
+  padding: 2.5px 5px;
+  color: darkslateblue;
+  letter-spacing: -0.5px;
+  
+}
+
+a:hover{
+  background-color: darkslateblue;
+  color: white;
+}
+
+.link{
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
 }
 
 body{
@@ -56,20 +89,28 @@ ul{
 }
 
 li{
-  width: calc((100%/3) - 60px);
-  text-align: center;
-  border: 3px solid palegoldenrod;
+  width: calc((100%/3) - 220px);
   margin: 30px;
   padding: 25px 2%;
   min-width: 220px;
-  max-width: 330px;
+  max-width: 310px;
 }
 
 .itemContainer{
+  position: relative;
   list-style: none;
   margin: 20px;
   padding: 0;
-  background-color: palegoldenrod;
+  box-shadow: 5px 10px 15px grey;
+}
+
+.itemContainer:hover{
+  box-shadow:5px 10px 15px slateblue ;
+}
+
+.textContainer{
+  margin: 5px 5px 10px 5px;
+ 
 }
 
 
@@ -93,7 +134,10 @@ input{
 }
 
 input:focus{
-  color: blue;
+  color: slateblue;
+}
+input::placeholder{
+  color: slategray;
 }
 
 .searchBtn{
@@ -104,7 +148,3 @@ input:focus{
   cursor: pointer;
 }
 
-a{
-  text-decoration: none;
-  
-}
