@@ -4,9 +4,9 @@ const Item = ({recipeData}) => {
 
     return(
         <li className="itemContainer">
-            <h3>{recipeData.title}</h3>
             <img src={recipeData.image} alt={recipeData.title} />
-            <a href={recipeData.sourceUrl}>Click Here for Recipe</a>
+            <h2>{recipeData.title}</h2>
+            <a href={recipeData.sourceUrl}>View Recipe</a>
         </li>
     )
 }

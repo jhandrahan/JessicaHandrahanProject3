@@ -19,7 +19,7 @@ const Form = ({handleSubmit}) => {
             onChange={handleChange}
             value={userInput}
             />
-            <button type="submit">Find Recipe</button>
+            <button type="submit" className="searchBtn">🔍</button>
         </form>
     )
 }

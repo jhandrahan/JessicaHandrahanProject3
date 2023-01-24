@@ -1,6 +1,7 @@
 import './App.css';
 import './fonts/Hind-Regular.ttf'
 import './fonts/Montserrat-VariableFont_wght.ttf'
+
 import Header from './components/Header'; 
 import Form from './components/Form';
 import Gallery from './components/Gallery'
