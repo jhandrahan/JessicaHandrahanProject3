@@ -9,10 +9,10 @@ const Form = ({handleSubmit}) => {
 
     return (
         <form className="search" action="" onSubmit={(event) => { handleSubmit(event, userInput) }} >
-            <label htmlFor="search"></label>
+            <label htmlFor="search">Search for Recipes:</label>
             <input 
             type="text" 
-            placeholder="Enter type of food here" 
+            placeholder="ie. pasta" 
             onChange={handleChange}
             value={userInput}
             />

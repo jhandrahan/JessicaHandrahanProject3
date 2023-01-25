@@ -29,9 +29,9 @@ function App() {
   }, [inputValue]);
 
   const selectInputValue = (event, chosenInput) => {
-        event.preventDefault();
-        setInputValue(chosenInput);
-    }
+    event.preventDefault();
+    setInputValue(chosenInput);
+  }
 
   return (
     <>

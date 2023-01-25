@@ -1,6 +1,4 @@
 const Item = ({recipeData}) => {
-    console.log(recipeData)
-
     return(
         <li className="itemContainer">
             <img src={recipeData.image} alt={recipeData.title} className="image" />
