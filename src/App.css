@@ -24,7 +24,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 }
 
 /* BASE STYLES */
-
+/* slateblue */
+/*orange/red #ff6c62 */
+/*light grey #aea9ba */
+/*darkgrey #494454 */
 html{
   font-size: 62.5%;
 }
@@ -125,12 +128,14 @@ img {
 
 /* FORM */
 
-form{
+.search{
   display: flex;
-  justify-content: center;
   margin: 50px 0;
+  flex-direction: column;
 }
-
+.searchBar{
+  text-align: center;
+}
 input{
   border: 1px solid black;
   border-right: none;
@@ -148,6 +153,7 @@ input::placeholder{
   color: rgb(99, 156, 212);
 }
 label{
+  text-align: center;
   padding: 5px;
   color: white;
 }

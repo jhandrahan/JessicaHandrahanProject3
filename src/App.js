@@ -5,38 +5,49 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Gallery from './components/Gallery'
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import axios from 'axios';
 
 function App() {
 
   const [recipes, setRecipes] = useState([]);
-  const [inputValue, setInputValue] = useState(' ');
+  const [userInput, setUserInput] = useState('');
 
-  useEffect(() => {
+  const handleClick= (event) => {
+    event.preventDefault();
     axios({
       baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
       params: {
-        apiKey: 'cf6c7cb9ef804ec5a5ee4edd6f19b1ee',
-        query: inputValue,
+        apiKey: 'dbce9eabfd0f437dbcce1553dc251387',
+        query: userInput,
         number: 20,
         addRecipeInformation: true
       }
+
     }).then((apiData) => {
-      setRecipes(apiData.data.results)      
+      setRecipes(apiData.data.results) 
     })
-
-  }, [inputValue]);
-
-  const selectInputValue = (event, chosenInput) => {
-    event.preventDefault();
-    setInputValue(chosenInput);
+    .catch((error) =>{
+      if(error.response.status === 402){
+        alert("Sorry 😓 The API that this site uses has reached its maximum calls for today, try again tomorrow")
+      }else{
+        alert("hmmm something went wrong... try again")
+      }
+    })
   }
+  const handleChange = (event) => {
+    setUserInput(event.target.value)
+  }
+
 
   return (
     <>
       <Header/>
-      <Form handleSubmit={selectInputValue}/>
+      <Form
+        handleSubmit={handleClick}
+        handleChange={handleChange}
+        userInput={userInput}
+      />
       <Gallery recipeArray={recipes}/>
       <Footer/>
     </>
