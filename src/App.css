@@ -47,16 +47,17 @@ h1{
   font-size: 6rem;
   color: white;
   font-family: Montserrat, sans-serif;
+  text-shadow: 5px 10px 15px black;
 }
 
 /* GALLERY */
 
 h2{
-  margin: 5px 1px 50px 1px;
+  margin: 5px 1px 5px 1px;
   font-family: Hind, sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
-  color: darkslateblue;
+  color: #ff6c62;
   text-transform: uppercase;
 }
 
@@ -65,16 +66,22 @@ a {
   font-family: Hind, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  border: 2px solid darkslateblue;
+  border: 2px solid #ff6c62;
   padding: 2.5px 5px;
-  color: darkslateblue;
-  letter-spacing: -0.5px;
-  
+  color: #ff6c62;
+  letter-spacing: -0.5px; 
+}
+
+h3{
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  color: #494454;
+  text-transform: capitalize;
 }
 
 a:hover,
 a:focus{
-  background-color: darkslateblue;
+  background-color: #ff6c62;
   color: white;
 }
 
@@ -107,10 +114,12 @@ li{
   margin: 20px;
   padding: 0;
   box-shadow: 5px 10px 15px grey;
+  border: 1px solid #aea9ba;
 }
 
 .itemContainer:hover{
   box-shadow:5px 10px 15px slateblue ;
+
 }
 
 img {
@@ -160,7 +169,7 @@ label{
 
 .searchBtn{
   width: 40px;
-  height: 36px;
+  height: 35px;
   border: 1px solid black;
   border-radius: 0 5px 5px 0;
   cursor: pointer;

@@ -15,6 +15,8 @@ function App() {
 
   const handleClick= (event) => {
     event.preventDefault();
+    setUserInput("");
+
     axios({
       baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
       params: {
@@ -26,6 +28,7 @@ function App() {
 
     }).then((apiData) => {
       setRecipes(apiData.data.results) 
+      console.log(apiData)
     })
     .catch((error) =>{
       if(error.response.status === 402){
@@ -35,8 +38,9 @@ function App() {
       }
     })
   }
+
   const handleChange = (event) => {
-    setUserInput(event.target.value)
+    setUserInput(event.target.value)  
   }
 
 

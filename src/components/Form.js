@@ -1,8 +1,9 @@
 
 const Form = ({handleSubmit, handleChange, userInput}) => {
     return (
-        <form className="search" action="" onSubmit={(event) => { handleSubmit(event, userInput) }} >
+        <form className="search" action="" onSubmit={(event) => { handleSubmit(event, userInput)}} >
             <label htmlFor="search">Search for Recipes:</label>
+            
             <div className="searchBar">
                 <input
                     type="text"
