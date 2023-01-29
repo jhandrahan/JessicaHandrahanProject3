@@ -172,7 +172,9 @@ label{
   padding: 5px;
   color: white;
 }
-
+button{
+   -webkit-appearance: none ;
+}
 .searchBtn{
   width: 40px;
   height: 35px;
@@ -208,9 +210,3 @@ footer{
 
 
 
-input[type=submit] {
-
-  -webkit-border-radius: 0 ;
-  -webkit-appearance: none ;
-
-}
