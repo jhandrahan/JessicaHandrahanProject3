@@ -208,9 +208,9 @@ footer{
 
 
 
-.wpcf7 input[type=submit] {
+input[type=submit] {
 
-  -webkit-border-radius: 0 !important;
-  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 ;
+  -webkit-appearance: none ;
 
 }
