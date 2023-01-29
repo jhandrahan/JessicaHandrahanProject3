@@ -2,7 +2,6 @@ import Item from './Item'
  
 
 const Gallery = ({recipeArray, loading}) => {    
-   
     return(
         <div>
             <ul className="recipeImages">

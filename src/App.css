@@ -23,11 +23,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
-/* BASE STYLES */
+/* BASE COLOR STYLES */
 /* slateblue */
 /*orange/red #ff6c62 */
 /*light grey #aea9ba */
 /*darkgrey #494454 */
+
 html{
   font-size: 62.5%;
 }
@@ -156,6 +157,7 @@ input{
   border-radius: 5px 0 0 5px;
   outline: none;
   width: 50%;
+
 }
 
 input:focus,
@@ -172,9 +174,7 @@ label{
   padding: 5px;
   color: white;
 }
-button{
-   -webkit-appearance: none ;
-}
+
 .searchBtn{
   width: 40px;
   height: 35px;
@@ -189,6 +189,7 @@ span{
   margin-bottom: 20px;
   font-family: Montserrat, sans-serif;
 }
+
 i{
   font-size: 1.5rem;
   color: rgb(54, 45, 109);
@@ -199,8 +200,6 @@ p {
   font-size: 2rem;
   font-family: Hind, sans-serif;
   text-align: center;
- 
-
 }
 
 footer{

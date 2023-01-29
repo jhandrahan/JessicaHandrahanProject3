@@ -1,4 +1,3 @@
-
 const Form = ({handleSubmit, handleChange, userInput}) => {
     return (
         <form className="search" action="" onSubmit={(event) => { handleSubmit(event, userInput)}} >
@@ -12,7 +11,6 @@ const Form = ({handleSubmit, handleChange, userInput}) => {
                     value={userInput}
                 />
                 <button type="submit" className="searchBtn"><i className="fa-solid fa-magnifying-glass"></i></button>
-                
             </div>
            
         </form>

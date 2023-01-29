@@ -12,6 +12,7 @@ function App() {
     const [recipes, setRecipes] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [loading, setLoading] = useState(false);
+   
 
     const handleClick= (event) => {
       event.preventDefault();
@@ -28,9 +29,8 @@ function App() {
 
       }).then((apiData) => {
         setRecipes(apiData.data.results) 
-        console.log(apiData)
+
         if (apiData.data.results.length === 0){
-          console.log("no data")
           setLoading(true)
         }else{
           setLoading(false)
@@ -40,7 +40,7 @@ function App() {
         if(error.response.status === 402){
           alert("Sorry 😓 The API that this site uses has reached its maximum calls for today, try again tomorrow")
         }else{
-          alert("hmmm something went wrong... try again")
+          alert("Hmmm... something went wrong... try again")
         }
       })
     }
@@ -49,8 +49,6 @@ function App() {
       setUserInput(event.target.value)  
     }
     
-    
-
   return (
     <>
       <Header/>
