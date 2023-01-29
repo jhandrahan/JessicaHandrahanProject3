@@ -1,13 +1,20 @@
 import Item from './Item'
+ 
 
-const Gallery = ({recipeArray}) => {
+const Gallery = ({recipeArray, loading}) => {    
+   
     return(
         <div>
             <ul className="recipeImages">
                 {
-                    recipeArray.map((recipeObject) =>{
-                      return <Item key={recipeObject.id} recipeData={recipeObject}/>
-                    })
+                    loading? <p>"Hmmm... No recipes, try again!"</p>
+                    
+                    :(recipeArray.map((recipeObject) =>{  
+                    return (<Item key={recipeObject.id} recipeData={recipeObject} />  
+                    )     
+
+                  }))
+ 
                 }
 
             </ul>

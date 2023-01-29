@@ -9,40 +9,47 @@ import {useState } from 'react';
 import axios from 'axios';
 
 function App() {
+    const [recipes, setRecipes] = useState([]);
+    const [userInput, setUserInput] = useState('');
+    const [loading, setLoading] = useState(false);
 
-  const [recipes, setRecipes] = useState([]);
-  const [userInput, setUserInput] = useState('');
+    const handleClick= (event) => {
+      event.preventDefault();
+      setUserInput("");
 
-  const handleClick= (event) => {
-    event.preventDefault();
-    setUserInput("");
+      axios({
+        baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
+        params: {
+          apiKey: 'dbce9eabfd0f437dbcce1553dc251387',
+          query: userInput,
+          number: 20,
+          addRecipeInformation: true
+        }
 
-    axios({
-      baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
-      params: {
-        apiKey: 'dbce9eabfd0f437dbcce1553dc251387',
-        query: userInput,
-        number: 20,
-        addRecipeInformation: true
-      }
+      }).then((apiData) => {
+        setRecipes(apiData.data.results) 
+        console.log(apiData)
+        if (apiData.data.results.length === 0){
+          console.log("no data")
+          setLoading(true)
+        }else{
+          setLoading(false)
+        }
+      })
+      .catch((error) =>{
+        if(error.response.status === 402){
+          alert("Sorry 😓 The API that this site uses has reached its maximum calls for today, try again tomorrow")
+        }else{
+          alert("hmmm something went wrong... try again")
+        }
+      })
+    }
 
-    }).then((apiData) => {
-      setRecipes(apiData.data.results) 
-      console.log(apiData)
-    })
-    .catch((error) =>{
-      if(error.response.status === 402){
-        alert("Sorry 😓 The API that this site uses has reached its maximum calls for today, try again tomorrow")
-      }else{
-        alert("hmmm something went wrong... try again")
-      }
-    })
-  }
-
-  const handleChange = (event) => {
-    setUserInput(event.target.value)  
-  }
-
+    const handleChange = (event) => {
+      setUserInput(event.target.value)  
+    }
+    
+    
 
   return (
     <>
@@ -52,10 +59,10 @@ function App() {
         handleChange={handleChange}
         userInput={userInput}
       />
-      <Gallery recipeArray={recipes}/>
+      <Gallery recipeArray={recipes} loading={loading}/>
       <Footer/>
     </>
   );
 }
-
 export default App;
+

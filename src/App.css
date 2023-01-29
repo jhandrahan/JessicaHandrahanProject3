@@ -61,7 +61,7 @@ h2{
   text-transform: uppercase;
 }
 
-a {
+.link {
   text-decoration: none;
   font-family: Hind, sans-serif;
   font-size: 1.5rem;
@@ -70,6 +70,12 @@ a {
   padding: 2.5px 5px;
   color: #ff6c62;
   letter-spacing: -0.5px; 
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 95%;
 }
 
 h3{
@@ -79,18 +85,13 @@ h3{
   text-transform: capitalize;
 }
 
-a:hover,
-a:focus{
+.link:hover,
+.link:focus{
   background-color: #ff6c62;
   color: white;
 }
 
-.link{
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 5px;
-}
+
 
 ul{
   background-color: white;
@@ -99,6 +100,7 @@ ul{
   flex-wrap: wrap;
   justify-content: center;
 }
+
 
 li{
   width: calc((100%/3) - 220px);
@@ -122,6 +124,7 @@ li{
 
 }
 
+
 img {
   max-width: 100%;
   opacity: 0.85;
@@ -129,6 +132,7 @@ img {
 
 .itemContainer:hover .image{
   opacity: 1;
+  
 }
 
 .textContainer {
@@ -154,9 +158,11 @@ input{
   width: 50%;
 }
 
-input:focus{
+input:focus,
+input:hover{
   color: slateblue;
 }
+
 
 input::placeholder{
   color: rgb(99, 156, 212);
@@ -174,11 +180,23 @@ label{
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+span{
+  color: black;
+  background-color: slateblue;
+  
+}
 
 /* FOOTER */
 p {
   font-size: 2rem;
   font-family: Hind, sans-serif;
   text-align: center;
-  color: white;
+ 
+
 }
+
+footer{
+  color: white;
+  margin-top: 10%;
+}
+

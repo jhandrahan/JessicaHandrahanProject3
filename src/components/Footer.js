@@ -1,6 +1,9 @@
 const Footer = () => {
     return(
-        <p>Created by Jessica Handrahan</p>
+        <footer>
+            <p>Created by Jessica Handrahan</p>
+        </footer>
+        
     )
 }
 export default Footer;
