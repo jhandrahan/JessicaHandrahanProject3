@@ -7,7 +7,7 @@ const Gallery = ({recipeArray, loading}) => {
         <div>
             <ul className="recipeImages">
                 {
-                    loading? <p>"Hmmm... No recipes, try again!"</p>
+                    loading ? <p><span>Hmmm... No Recipes Found. </span>  Try again with some different keywords.</p>
                     
                     :(recipeArray.map((recipeObject) =>{  
                     return (<Item key={recipeObject.id} recipeData={recipeObject} />  
