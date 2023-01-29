@@ -187,6 +187,10 @@ span{
   margin-bottom: 20px;
   font-family: Montserrat, sans-serif;
 }
+i{
+  font-size: 1.5rem;
+  color: rgb(54, 45, 109);
+}
 
 /* FOOTER */
 p {
@@ -201,4 +205,6 @@ footer{
   color: white;
   margin-top: 10%;
 }
+
+
 

@@ -11,7 +11,7 @@ const Form = ({handleSubmit, handleChange, userInput}) => {
                     onChange={handleChange}
                     value={userInput}
                 />
-                <button type="submit" className="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="submit" className="searchBtn"><i className="fa-solid fa-magnifying-glass"></i></button>
                 
             </div>
            
