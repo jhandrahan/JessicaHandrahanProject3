@@ -11,6 +11,7 @@ import axios from 'axios';
 function App() {
     const [recipes, setRecipes] = useState([]);
     const [userInput, setUserInput] = useState('');
+    const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
    
 
@@ -31,9 +32,11 @@ function App() {
         setRecipes(apiData.data.results) 
 
         if (apiData.data.results.length === 0){
-          setLoading(true)
+          setError(true);
+          setLoading(false);
         }else{
-          setLoading(false)
+          setError(false);
+          setLoading(false);
         }
       })
       .catch((error) =>{
@@ -51,13 +54,18 @@ function App() {
     
   return (
     <>
+    <main>
+
+    
       <Header/>
       <Form
         handleSubmit={handleClick}
         handleChange={handleChange}
         userInput={userInput}
+        loading={loading}
       />
-      <Gallery recipeArray={recipes} loading={loading}/>
+      <Gallery recipeArray={recipes} error={error}/>
+      </main>
       <Footer/>
     </>
   );

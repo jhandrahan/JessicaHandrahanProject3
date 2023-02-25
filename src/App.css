@@ -37,6 +37,9 @@ body {
   background-color: slateblue;
   font-size: 2rem;
 }
+main{
+  min-height: 70vh;
+}
 
 /* HEADER */
 
